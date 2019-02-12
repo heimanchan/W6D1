@@ -104,7 +104,7 @@ eval("console.log(\"Webpack is working!\")\n\nconst MovingObject = __webpack_req
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("function MovingObject (option = {pos: null, vel: null, radius: null, color: null}) {\n  this.pos = option[pos];\n  this.vel = option[vel];\n  this.radius = option[radius];\n  this.color = option[color];\n}\n\nmodule.exports = MovingObject;\n\n//# sourceURL=webpack:///./src/moving_object.js?");
+eval("function MovingObject(option = {}) {\n  this.pos = option.pos;\n  this.vel = option.vel;\n  this.radius = option.radius;\n  this.color = option.color;\n}\n\nMovingObject.prototype.draw = function(ctx) {\n  const canvas = document.getElementById('game-canvas');\n  const context = canvas.getContext('2d');\n  const centerX = this.pos[0];\n  const centerY = this.pos[1];\n}\n\nmodule.exports = MovingObject;\n\n//# sourceURL=webpack:///./src/moving_object.js?");
 
 /***/ })
 
